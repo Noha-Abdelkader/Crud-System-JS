@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD SYSTEM</title>
+
+    <!-- ----------- animsition------------------- -->
+    <link rel="stylesheet" href="css/animsition.min.css">
+
+    <!-- --------- box icon ------------------------------- -->
+    <link rel="stylesheet" href="css/boxicons.min.css">
+
+    <!-- ----------- bootstrap ---------------------------------- -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <!-- ---------- style sheet ------------------------------------ -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class=" text-white text-center animsition-overlay" data-animsition-in-class=" overlay-slide-in-bottom"
+    data-animsition-overlay="true"
+    data-animsition-in-duration="1000"
+    data-animsition-out-class="overlay-slide-out-bottom"
+  data-animsition-out-duration="800">
+        <div class="container p-3 animsition"
+        data-animsition-in-class="zoom-in-lg"
+        data-animsition-in-duration="1000"
+        data-animsition-out-class="zoom-out-lg"
+        data-animsition-out-duration="800">
+            <h1 class="mb-4 rounded rounded-pill text-uppercase py-2">Crud system</h1>
+            <div class="w-100">
+                <div class=" mb-3">
+                    <input type="text" class="form-control" id="productName" placeholder="ProductName " required>
+                    <small class="text-danger" id="nameReq"><i class='bx bx-comment-error bx-flashing' style='color:#ec0d0d' ></i> Product Name is required</small>
+                </div>
+
+             <div class="mb-3">
+                <div class=" d-flex">
+                    <input type="number" class="form-control me-2" id="price" placeholder="Price "  required onkeyup="getTotal()">
+                <input type="number" class="form-control me-2" id="taxes" placeholder="Taxes" onkeyup="getTotal()">
+                <input type="number" class="form-control me-2" id="ads" placeholder="Ads" onkeyup="getTotal()">
+                <input type="number" class="form-control me-2" id="discount" placeholder="Discount" onkeyup="getTotal()">
+                <span id='total' class=" rounded fw-bolder text-wrap p-1"> </span>
+            </div>
+            <small class="text-danger" id="priceReq"> <i class='bx bx-comment-error bx-flashing' style='color:#ec0d0d' ></i> Price is required</small>
+             </div>
+
+
+                <input type="number" class="form-control mb-3" id="count" placeholder="Count ">
+                <small class="text-danger mb-3" id="countReq"> <i class='bx bx-comment-error bx-flashing' style='color:#ec0d0d' ></i> Count is required</small>    
+
+              <div class="mb-3">
+                <input type="text" class="form-control" required id="category" placeholder="Category ">
+                <small class="text-danger" id="categoryReq"> <i class='bx bx-comment-error bx-flashing' style='color:#ec0d0d' ></i> Category is required</small>    
+              </div>
+
+                <button id="submit" class='mb-1'>Create</button>
+                <small class=" text-danger mb-3" id="inputsAlert"><i class='bx bx-error bx-tada' style='color:#f50000'  ></i> There are missing inputs  </small>  
+
+               
+
+                <div class="d-flex mb-2">
+                        <input type="text" id="searchName" placeholder="Search By Product Name" class="form-control text-center m-2 " onkeyup="searchBy(this.value , this.id)">
+                        <input type="text" id="searchCategory" placeholder="Search By Category" class="form-control text-center m-2" onkeyup="searchBy(this.value , this.id)">
+                </div>
+
+                <button class='mb-3' id="deleteAllBtn" onclick="deleteAll()">Delete All</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr class="text-light">
+                        <th>ID</th>
+                        <th>Product Name</th>
+                        <th>Total Price</th>
+                        <th>Category</th>
+                        <th>Update</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+                <tbody id="tbody" class="bg-light text-black-50 border-dark">
+
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+
+<!-- ------------ jquery ------------------ -->
+<script src="js/jquery-3.6.3.min.js"></script>
+
+    <!-- --------- animsition------------------ -->
+    <script src="js/animsition.min.js"></script>
+    <!-- --------- box icon ------------------------------- -->
+<!-- <script src="js/boxicons.js"></script> -->
+
+<!-- --------- bootstrap ------------------------------------ -->
+<script src="js/bootstrap.bundle.min.js"></script>
+
+<!-- ------- script --------------------------------- -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>

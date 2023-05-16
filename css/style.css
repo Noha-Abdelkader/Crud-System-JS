@@ -1,0 +1,88 @@
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+/* ----------------------------------------------------------- */
+body{
+background: 
+	linear-gradient(90deg , skyblue,transparent),
+    linear-gradient(90deg ,  rgb(218, 222, 8),transparent),
+    linear-gradient(90deg , rgb(156, 108, 19) , skyblue);   
+    margin: auto;
+
+}
+
+h1{
+    color: rgb(38, 71, 84);
+    border: 1px dotted slategray;
+    
+}
+
+input{
+    background-color: rgb(236, 230, 230) !important;
+    color: rgb(40, 111, 173) !important;
+    border: none !important;
+    transition: all 1s;
+}
+input:focus{
+    transform: scale(1.06);
+    box-shadow: 0 0 0.5rem 0.25rem rgb(13 110 253 / 25%) !important;
+    
+}
+button{
+    background-color: rgba(16, 16, 183, 0.4);
+    border-radius: 40px;
+    width: 100%;
+    color: white;
+    border: 1px solid white;
+    padding: 0.3rem;
+}
+#total{
+    background-color: #f80000;
+}
+#total::before{
+    content: 'Total ';
+}
+table{
+    width: 100%;
+}
+ td , tr , th{
+    border:1px dotted rgb(69, 129, 189);
+    color: rgb(40, 111, 173) !important; 
+
+}
+
+th , td{
+padding: 3px;
+}
+
+table a{
+   cursor: pointer;
+}
+table a i , td i{
+    vertical-align: baseline;
+}
+#deleteAllBtn{
+    display: none;
+}
+small{
+    display: none;
+    font-weight: 900;
+    color: black !important;
+}
+small i{
+    font-size: 1.2rem;
+    vertical-align: bottom;
+}
+
+@media screen and (min-width:992px) and (max-width:1550px) {
+    .container{
+        width:50%;
+    }
+}
+
+.animsition-overlay-slide{
+    background: linear-gradient(90deg ,  skyblue,transparent);
+}
+
